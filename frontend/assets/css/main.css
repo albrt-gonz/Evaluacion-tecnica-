@@ -1,0 +1,357 @@
+/*
+Liverpool México - CSS Principal
+RETO - Analisis de textos
+*/
+
+:root {
+    /* Colores principales Liverpool */
+    --liverpool-rosa: #ec008c;
+    --liverpool-rosa-hover: #d1007a;
+    --liverpool-rosa-light: #f5e6f0;
+    --liverpool-gris-oscuro: #53565a;
+    --liverpool-gris-claro: #d1d3d4;
+    --liverpool-gris-medio: #8a8d91;
+    --liverpool-negro: #101820;
+    --liverpool-blanco: #ffffff;
+
+    /* Estados */
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-info: #ec008c;
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, #ec008c 0%, #d1007a 100%);
+    --gradient-header: linear-gradient(135deg, #ec008c 0%, #53565a 100%);
+    --gradient-light: linear-gradient(135deg, #ffffff 0%, #d1d3d4 100%);
+
+    /* Sombras */
+    --shadow-primary: 0 8px 32px rgba(236, 0, 140, 0.15);
+    --shadow-card: 0 4px 6px rgba(83, 86, 90, 0.1);
+    --shadow-hover: 0 8px 25px rgba(236, 0, 140, 0.2);
+
+    /* Bordes */
+    --border-color: #e5e7eb;
+    --border-radius: 12px;
+    --border-radius-large: 16px;
+
+    /* Espaciado */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
+
+    /* Tipografía */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+}
+
+/* Reset y base */
+.gradio-container {
+    font-family: var(--font-family);
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--liverpool-negro);
+    line-height: 1.6;
+}
+
+/* Layout principal */
+.main-layout {
+    background: var(--liverpool-blanco);
+    min-height: 100vh;
+}
+
+/* Headers y títulos */
+.main-header {
+    background: var(--gradient-header);
+    padding: var(--spacing-xxl) var(--spacing-xl);
+    border-radius: var(--border-radius-large);
+    text-align: center;
+    color: var(--liverpool-blanco);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: var(--shadow-primary);
+}
+
+.main-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.02em;
+}
+
+.main-subtitle {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+    font-weight: 400;
+    margin-bottom: var(--spacing-sm);
+}
+
+.main-description {
+    font-size: var(--font-size-base);
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+/* Secciones y cards */
+.section-card {
+    background: var(--liverpool-blanco);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--liverpool-gris-claro);
+    margin-bottom: var(--spacing-md);
+    transition: all 0.2s ease;
+}
+
+.section-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.section-title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--liverpool-negro);
+    margin: 0 0 var(--spacing-md) 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.section-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--liverpool-gris-oscuro);
+    margin: 0 0 var(--spacing-md) 0;
+}
+
+/* Botones Liverpool */
+.liverpool-btn-primary {
+    background: var(--gradient-primary) !important;
+    color: var(--liverpool-blanco) !important;
+    border: none !important;
+    border-radius: var(--border-radius) !important;
+    padding: var(--spacing-md) var(--spacing-xl) !important;
+    font-weight: 600 !important;
+    font-size: var(--font-size-base) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    box-shadow: var(--shadow-card) !important;
+}
+
+.liverpool-btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow-hover) !important;
+    background: var(--liverpool-rosa-hover) !important;
+}
+
+.liverpool-btn-secondary {
+    background: var(--liverpool-blanco) !important;
+    color: var(--liverpool-rosa) !important;
+    border: 2px solid var(--liverpool-rosa) !important;
+    border-radius: var(--border-radius) !important;
+    padding: var(--spacing-sm) var(--spacing-lg) !important;
+    font-weight: 500 !important;
+    font-size: var(--font-size-sm) !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+}
+
+.liverpool-btn-secondary:hover {
+    background: var(--liverpool-rosa) !important;
+    color: var(--liverpool-blanco) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Estados */
+.status-success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-success);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    font-weight: 500;
+}
+
+.status-error {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--color-error);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    font-weight: 500;
+}
+
+.status-warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--color-warning);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    font-weight: 500;
+}
+
+.status-info {
+    background: var(--liverpool-rosa-light);
+    color: var(--liverpool-rosa);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(236, 0, 140, 0.2);
+    font-weight: 500;
+}
+
+/* Métricas */
+.metrics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.metric-card {
+    background: var(--liverpool-blanco);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--liverpool-gris-claro);
+    transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: var(--liverpool-rosa);
+}
+
+.metric-number {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--liverpool-rosa);
+    margin-bottom: var(--spacing-xs);
+    display: block;
+}
+
+.metric-label {
+    font-size: var(--font-size-sm);
+    color: var(--liverpool-gris-oscuro);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Estados de carga */
+.loading-state {
+    text-align: center;
+    color: var(--liverpool-gris-medio);
+    padding: var(--spacing-xl);
+    font-style: italic;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--liverpool-gris-medio);
+    padding: var(--spacing-xl);
+    font-style: italic;
+    background: rgba(209, 211, 212, 0.1);
+    border-radius: var(--border-radius);
+    border: 2px dashed var(--liverpool-gris-claro);
+}
+
+/* Inputs y formularios */
+.liverpool-input {
+    border: 2px solid var(--liverpool-gris-claro) !important;
+    border-radius: var(--border-radius) !important;
+    padding: var(--spacing-md) !important;
+    font-size: var(--font-size-base) !important;
+    transition: all 0.2s ease !important;
+    background: var(--liverpool-blanco) !important;
+}
+
+.liverpool-input:focus {
+    border-color: var(--liverpool-rosa) !important;
+    box-shadow: 0 0 0 3px rgba(236, 0, 140, 0.1) !important;
+    outline: none !important;
+}
+
+/* Tabs Liverpool */
+.liverpool-tabs {
+    border-bottom: 2px solid var(--liverpool-gris-claro);
+    margin-bottom: var(--spacing-xl);
+}
+
+.liverpool-tab {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 3px solid transparent !important;
+    color: var(--liverpool-gris-oscuro) !important;
+    font-weight: 500 !important;
+    padding: var(--spacing-md) var(--spacing-lg) !important;
+    transition: all 0.2s ease !important;
+}
+
+.liverpool-tab.active {
+    color: var(--liverpool-rosa) !important;
+    border-bottom-color: var(--liverpool-rosa) !important;
+    background: rgba(236, 0, 140, 0.05) !important;
+}
+
+.liverpool-tab:hover {
+    color: var(--liverpool-rosa) !important;
+    background: rgba(236, 0, 140, 0.05) !important;
+}
+
+/* Footer Liverpool */
+.liverpool-footer {
+    margin-top: var(--spacing-xxl);
+    padding: var(--spacing-xl);
+    background: var(--gradient-light);
+    border-radius: var(--border-radius-large);
+    text-align: center;
+    border: 1px solid var(--liverpool-gris-claro);
+}
+
+.footer-title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--liverpool-negro);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-subtitle {
+    font-size: var(--font-size-base);
+    color: var(--liverpool-gris-oscuro);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-description {
+    font-size: var(--font-size-sm);
+    color: var(--liverpool-gris-medio);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-header {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+
+    .main-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .section-card {
+        padding: var(--spacing-md);
+    }
+
+    .metrics-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: var(--spacing-sm);
+    }
+}
